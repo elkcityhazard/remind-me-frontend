@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import './index.css'
 import { Signup } from './signup/Signup.jsx';
+import { Activation } from './pages/user/activation/Activation.jsx';
 import { Home } from './Home.jsx';
 import { SignupSuccess } from './pages/signup/success/Success';
 
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
     {
         path: "/signup/success",
         element: <App><SignupSuccess /></App>,
+        errorElement: <ErrorPage />
+    },
+    {
+        path: "/user/activation",
+        element: <App><Activation /></App>,
         errorElement: <ErrorPage />
     }
 ]);
